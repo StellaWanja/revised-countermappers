@@ -1,0 +1,320 @@
+.topbar {
+  position: fixed;
+  z-index: 40;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 92px;
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  padding: 0 34px 0 0;
+  color: var(--paper);
+  background: linear-gradient(
+    180deg,
+    rgba(24, 36, 43, 0.98),
+    rgba(24, 36, 43, 0.76) 68%,
+    transparent
+  );
+  backdrop-filter: blur(10px);
+}
+.header-left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.menu-button {
+  width: 110px;
+  height: 92px;
+  display: grid;
+  place-content: center;
+  gap: 6px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 0;
+  border-right: 1px solid var(--line-light);
+  color: var(--paper);
+  pointer-events: none; /* Desktop: hamburger is decorative */
+}
+.menu-button span {
+  display: block;
+  width: 23px;
+  height: 1px;
+  background: var(--paper);
+}
+.menu-button span:nth-child(2) {
+  width: 14px;
+  margin-left: 9px;
+}
+.wordmark {
+  margin-left: 36px;
+  color: var(--paper);
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+}
+.wordmark span {
+  color: #8d9da2;
+  font-weight: 500;
+}
+.main-nav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  white-space: nowrap;
+}
+.nav-links a {
+  position: relative;
+  padding: 10px 0;
+  color: #bdc5c7;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 1px;
+  height: 2px;
+  background: var(--paper);
+  transition: right 0.25s ease;
+}
+.nav-links a.active,
+.nav-links a:hover {
+  color: var(--paper);
+}
+.nav-links a.active::after {
+  right: 0;
+}
+.top-cta {
+  position: absolute;
+  top: 50%;
+  right: 34px;
+  transform: translateY(-50%);
+  height: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 17px;
+  color: var(--paper);
+  background: rgba(233, 236, 235, 0.1);
+  border: 1px solid rgba(233, 236, 235, 0.15);
+  font-size: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.top-cta:hover {
+  background: rgba(233, 236, 235, 0.15);
+}
+.close-button {
+  display: none;
+}
+.overlay-cta {
+  display: none;
+}
+
+/* RESPONSIVE STYLES */
+@media screen and (max-width: 1200px) and (min-width: 950px) {
+  .topbar {
+    height: 88px;
+    min-height: 88px;
+    padding-right: 24px;
+  }
+  .menu-button {
+    width: 90px;
+    height: 88px;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+  .wordmark {
+    margin-left: 24px;
+    font-size: 24px;
+  }
+  .main-nav {
+    position: static;
+    transform: none;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+  .nav-links {
+    gap: 20px;
+  }
+  .nav-links a {
+    font-size: 13px;
+  }
+  .top-cta {
+    position: static;
+    transform: none;
+    margin-left: 20px;
+    height: 42px;
+    min-height: 42px;
+    padding: 0 14px;
+    font-size: 11px;
+  }
+  .overlay-cta {
+    display: none;
+  }
+  .close-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .topbar {
+    height: 76px;
+    min-height: 76px;
+    padding: 0;
+    background: rgba(24, 36, 43, 0.98);
+  }
+  .menu-button {
+    width: 76px;
+    height: 76px;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+  .wordmark {
+    margin-left: 20px;
+    font-size: 22px;
+  }
+  .main-nav {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 100px 32px 40px;
+    margin: 0;
+    background: rgba(24, 36, 43, 0.98);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease,
+      transform 0.25s ease;
+  }
+  /*
+    OPEN MENU
+  */
+  .main-nav.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  /* CLOSE BUTTON */
+  .close-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 76px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.04);
+    border: 0;
+    border-left: 1px solid var(--line-light);
+    cursor: pointer;
+  }
+  .close-button span {
+    position: absolute;
+    width: 24px;
+    height: 1px;
+    background: var(--paper);
+  }
+  .close-button span:first-child {
+    transform: rotate(45deg);
+  }
+  .close-button span:last-child {
+    transform: rotate(-45deg);
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+  .nav-links a {
+    color: var(--paper);
+    font-size: clamp(30px, 8vw, 48px);
+    padding: 4px 0;
+  }
+  .top-cta {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+    height: 42px;
+    min-height: 42px;
+    padding: 0 14px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .topbar {
+    height: 72px;
+    min-height: 72px;
+  }
+  .menu-button {
+    width: 68px;
+    height: 72px;
+  }
+  .wordmark {
+    margin-left: 16px;
+    font-size: 20px;
+  }
+  .main-nav {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .close-button {
+    width: 68px;
+    height: 72px;
+  }
+  .top-cta {
+    display: none;
+  }
+  .overlay-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 32px;
+    height: 48px;
+    padding: 0 17px;
+    color: var(--paper);
+    background: rgba(233, 236, 235, 0.1);
+    border: 1px solid rgba(233, 236, 235, 0.15);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+  }
+}
