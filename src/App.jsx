@@ -18,6 +18,7 @@ import PracticePage from "./PracticePage";
 import NotesPage from "./NotesPage";
 import AboutPage from "./AboutPage";
 import ContactPage from "./ContactPage";
+import "./styles/App.css";
 import "./styles/Header.css";
 
 const navItems = [
@@ -101,8 +102,8 @@ function App() {
         </button>
       </header>
 
-      {/* Side menu */}
-      <aside className="rail" aria-label="Section index">
+      {/* SIDE MENU */}
+      <aside className="rail" aria-label="Section navigation">
         <div />
         <div className="rail-bottom">
           <Link to="/" className="rail-mark">
