@@ -1,3 +1,8 @@
+import Image1 from "./assets/kisiwani-three.jpg";
+import Image2 from "./assets/Creek1.jpg";
+import Image3 from "./assets/Agency1.jpg";
+import Image4 from "./assets/Coast1.jpg";
+
 export const projects = [
   {
     number: "01",
@@ -11,6 +16,7 @@ export const projects = [
       "This project explores how community memory, lived experience and localized knowledge can become part of spatial representation. Rather than treating the map as a finished technical object, the work approaches mapping as a process of listening, interpretation and collective knowledge production.",
     location: "Coastal Kenya",
     method: "Participatory and counter-mapping",
+    image: Image1
   },
   {
     number: "02",
@@ -24,6 +30,7 @@ export const projects = [
       "The research examines the spatial relationships that emerge through everyday practices around Mida Creek, paying attention to territory, mobility, resources and local knowledge that may remain absent from formal spatial representations.",
     location: "Mida Creek, Kenya",
     method: "Spatial analysis and field research",
+    image: Image2
   },
   {
     number: "03",
@@ -37,6 +44,7 @@ export const projects = [
       "This project questions how historical territories are represented and remembered. It considers cartographic agency as a way of revisiting inherited spatial narratives and opening alternative readings of place, history and territory.",
     location: "Coastal Kenya",
     method: "Historical and critical cartographic research",
+    image: Image3
   },
   {
     number: "04",
@@ -50,6 +58,7 @@ export const projects = [
       "The project traces relationships and forms of mutual support that sustain community action. Mapping is used here to make social relationships and locally embedded networks visible as part of a broader inquiry into social innovation and collective agency.",
     location: "Mida Creek Area, Kenya",
     method: "Network mapping and community engagement",
+    image: Image4
   },
 ];
 export const practice = [

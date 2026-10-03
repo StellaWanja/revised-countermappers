@@ -1,34 +1,13 @@
+import "./styles/SplitPage.css";
 
-function SectionLabel({ index, label }) {
-  return (
-    <div className="section-label">
-      <span>/{index}</span>
-      <span>{label}</span>
-    </div>
-  );
-}
-
-function SplitPage({
-  label,
-  index,
-  visual,
-  children,
-  dark = false,
-  visualMeta = "COUNTERMAPPERS / RESEARCH ARCHIVE",
-}) {
+function SplitPage({ visual, children, dark = false }) {
   return (
     <section
       className={`page split-page ${dark ? "section-dark" : "section-light"}`}
     >
-      <aside className="split-visual">
-        {visual}
-        <div className="split-visual-meta">{visualMeta}</div>
-      </aside>
+      <aside className="split-visual">{visual}</aside>
       <div className="split-scroll">
-        <div className="split-content">
-          <SectionLabel index={index} label={label} />
-          {children}
-        </div>
+        <div className="split-content">{children}</div>
       </div>
     </section>
   );

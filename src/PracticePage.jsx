@@ -1,7 +1,7 @@
-import SplitPage from "./SplitPage"
-import MapArtwork from "./MapArtwork"
-import { practice } from "./constants"
-import {FaArrowRight} from "react-icons/fa"
+import SplitPage from "./SplitPage";
+import MapArtwork from "./MapArtwork";
+import { practice } from "./constants";
+import { FaArrowRight } from "react-icons/fa";
 
 function PracticePage() {
   return (
@@ -15,7 +15,6 @@ function PracticePage() {
           <span className="visual-index">03 / SPATIAL PRACTICE</span>
         </div>
       }
-      visualMeta="RESEARCH / TEACHING / PLANNING"
     >
       <div className="split-title">
         <h2>
@@ -41,7 +40,7 @@ function PracticePage() {
         ))}
       </div>
     </SplitPage>
-  )
+  );
 }
 
-export default PracticePage
+export default PracticePage;

@@ -1,19 +1,16 @@
 import SplitPage from "./SplitPage";
+import ProfileImg from "./assets/profile-img.jpeg"
+import "./styles/About.css";
 
 function AboutPage() {
-   return (
+  return (
     <SplitPage
-      label="About"
-      index="05"
       dark={true}
       visual={
         <div className="portrait-panel">
-          <div className="portrait-grid" />
-          <div className="portrait-initials">DNM</div>
-          <span>RESEARCHER / URBANIST</span>
+          <img src={ProfileImg} alt="Profile" />
         </div>
       }
-      visualMeta="URBANIST / PH.D. RESEARCHER / PHYSICAL PLANNER"
     >
       <div className="split-title">
         <h2>
@@ -114,7 +111,6 @@ function AboutPage() {
       </div>
     </SplitPage>
   );
-
 }
 
-export default AboutPage
+export default AboutPage;

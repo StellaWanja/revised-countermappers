@@ -1,7 +1,7 @@
 import { Link } from "react-router";
-import MapArtwork from "./MapArtwork";
 import { projects } from "./constants";
 import { FaArrowRight } from "react-icons/fa";
+import "./styles/Projects.css";
 
 function ProjectsPage() {
   return (
@@ -16,7 +16,7 @@ function ProjectsPage() {
         </p>
       </div>
       <div className="projects-grid-page">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <Link
             className="project-index-card"
             key={project.number}
@@ -27,7 +27,7 @@ function ProjectsPage() {
               <span>{project.year}</span>
             </div>
             <div className="project-index-art">
-              <MapArtwork variant={index + 1} />
+              <img src={project.image} alt={project.title} />
             </div>
             <div className="project-index-content">
               <span>{project.subtitle}</span>
@@ -38,9 +38,10 @@ function ProjectsPage() {
                   <span key={tag}>{tag}</span>
                 ))}
               </div>
-              <div className="project-link">
-                Read case study <FaArrowRight />
-              </div>
+              <Link to={`/projects/${project.slug}`} className="project-link">
+                <span>Read case study </span>
+                <FaArrowRight />
+              </Link>
             </div>
           </Link>
         ))}

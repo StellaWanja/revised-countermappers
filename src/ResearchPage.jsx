@@ -1,19 +1,16 @@
 import SplitPage from "./SplitPage";
-import MapArtwork from "./MapArtwork";
+import ResearchArtwork from "./assets/Minimalist-urban-map.png";
+import "./styles/Research.css";
 
 function ResearchPage() {
   return (
     <SplitPage
-      label="Research"
-      index="01"
       dark={false}
       visual={
-        <div className="visual-stack">
-          <MapArtwork variant={2} />
-          <span className="visual-index">01 / SPATIAL INQUIRY</span>
+        <div className="visual-stack research-visual">
+          <img src={ResearchArtwork} alt="Research Artwork" />
         </div>
       }
-      visualMeta="CRITICAL CARTOGRAPHY / SPATIAL RESEARCH"
     >
       <div className="split-title">
         <h2>
