@@ -1,7 +1,9 @@
+import { Link } from "react-router"
 import SplitPage from "./SplitPage"
-import MapArtwork from "./MapArtwork"
 import { notes } from "./constants"
+import ProfileImg from "./assets/Coast4.jpg"
 import { FaArrowRight } from "react-icons/fa"
+import "./styles/Notes.css"
 
 function NotesPage() {
   return (
@@ -10,9 +12,8 @@ function NotesPage() {
       index="04"
       dark={false}
       visual={
-        <div className="visual-stack">
-          <MapArtwork variant={4} />
-          <span className="visual-index">04 / FIELD NOTES</span>
+        <div className="visual-stack notes-visual">
+          <img src={ProfileImg} alt="Notes Artwork" />
         </div>
       }
       visualMeta="OBSERVATIONS / WRITING / RESEARCH"
@@ -29,7 +30,7 @@ function NotesPage() {
 
       <div className="note-list-page">
         {notes.map((note, index) => (
-          <article className="note-row-page" key={note.title}>
+          <Link to={`/projects/${note.link}`} className="note-row-page" key={note.title}>
             <div className="note-date">{note.date}</div>
             <div className="note-index">0{index + 1}</div>
             <div className="note-body">
@@ -37,7 +38,7 @@ function NotesPage() {
               <h3>{note.title}</h3>
             </div>
             <FaArrowRight />
-          </article>
+          </Link>
         ))}
       </div>
       </SplitPage>

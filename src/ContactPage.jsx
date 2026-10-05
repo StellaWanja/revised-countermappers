@@ -1,19 +1,16 @@
 import { Link } from "react-router";
 import SplitPage from "./SplitPage";
 import { FaArrowRight } from "react-icons/fa";
+import EnvelopeImg from "./assets/envelope.png";
+import "./styles/Contact.css";
 
 function ContactPage() {
-   return (
+  return (
     <SplitPage
-      label="Contact"
-      index="06"
       dark={false}
       visual={
         <div className="contact-visual">
-          <span>READ</span>
-          <span>MAP</span>
-          <span>QUESTION</span>
-          <span>ACT</span>
+          <img src={EnvelopeImg} alt="Contact Artwork" />
         </div>
       }
       visualMeta="RESEARCH / COLLABORATION / PRACTICE"
@@ -51,7 +48,6 @@ function ContactPage() {
       </div>
     </SplitPage>
   );
-
 }
 
-export default ContactPage
+export default ContactPage;

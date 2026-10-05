@@ -1,7 +1,18 @@
-import Image1 from "./assets/kisiwani-three.jpg";
-import Image2 from "./assets/Creek1.jpg";
-import Image3 from "./assets/Agency1.jpg";
-import Image4 from "./assets/Coast1.jpg";
+import BgKisiwani from "./assets/kisiwani-three.jpg";
+import Kisiwani2 from "./assets/kisiwani-two.jpg";
+import Kisiwani1 from "./assets/kisiwani-one.jpg";
+import BgMidaCreek from "./assets/Creek1.jpg";
+import Creek2 from "./assets/Creek2.jpg";
+import Creek3 from "./assets/Creek3.jpg";
+import Creek4 from "./assets/Creek4.jpg";
+import BgCartography from "./assets/Agency1.jpg";
+import Agency2 from "./assets/Agency2.jpg";
+import Agency3 from "./assets/Agency3.jpg";
+import Agency4 from "./assets/Agency4.jpg";
+import BgSolidarity from "./assets/Coast1.jpg";
+import Solidarity2 from "./assets/Coast2.jpg";
+import Solidarity3 from "./assets/Coast3.jpg";
+import Solidarity4 from "./assets/Coast4.jpg";
 
 export const projects = [
   {
@@ -16,7 +27,7 @@ export const projects = [
       "This project explores how community memory, lived experience and localized knowledge can become part of spatial representation. Rather than treating the map as a finished technical object, the work approaches mapping as a process of listening, interpretation and collective knowledge production.",
     location: "Coastal Kenya",
     method: "Participatory and counter-mapping",
-    image: Image1
+    blogImages: [BgKisiwani, Kisiwani1, Kisiwani2],
   },
   {
     number: "02",
@@ -30,7 +41,7 @@ export const projects = [
       "The research examines the spatial relationships that emerge through everyday practices around Mida Creek, paying attention to territory, mobility, resources and local knowledge that may remain absent from formal spatial representations.",
     location: "Mida Creek, Kenya",
     method: "Spatial analysis and field research",
-    image: Image2
+    blogImages: [BgMidaCreek, Creek2, Creek3, Creek4],
   },
   {
     number: "03",
@@ -44,7 +55,7 @@ export const projects = [
       "This project questions how historical territories are represented and remembered. It considers cartographic agency as a way of revisiting inherited spatial narratives and opening alternative readings of place, history and territory.",
     location: "Coastal Kenya",
     method: "Historical and critical cartographic research",
-    image: Image3
+    blogImages: [BgCartography, Agency2, Agency3, Agency4],
   },
   {
     number: "04",
@@ -58,7 +69,7 @@ export const projects = [
       "The project traces relationships and forms of mutual support that sustain community action. Mapping is used here to make social relationships and locally embedded networks visible as part of a broader inquiry into social innovation and collective agency.",
     location: "Mida Creek Area, Kenya",
     method: "Network mapping and community engagement",
-    image: Image4
+    blogImages: [BgSolidarity, Solidarity2, Solidarity3, Solidarity4],
   },
 ];
 export const practice = [
@@ -104,15 +115,18 @@ export const notes = [
     date: "15.07.2023",
     category: "FIELDWORK",
     title: "Journey into the Heart of Kisiwani Island",
+    link: projects[0].slug,
   },
   {
     date: "—",
     category: "CRITICAL CARTOGRAPHY",
     title: "Unearthing the Spatial Violence",
+    link: projects[1].slug,
   },
   {
     date: "RESEARCH NOTE",
     category: "METHODS",
     title: "What happens when mapping becomes a participatory practice?",
+    link: projects[3].slug,
   },
 ];

@@ -1,0 +1,124 @@
+.back-link {
+  margin-top: 32px;
+  color: #8e9a9f;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+.back-link:hover {
+  color: var(--paper);
+}
+.project-page {
+  width: calc(100% - 110px);
+  margin-left: 110px;
+  height: calc(100svh - 92px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--deep);
+  color: var(--paper);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(233, 236, 235, 0.35) transparent;
+}
+.project-page::-webkit-scrollbar {
+  width: 6px;
+}
+.project-page::-webkit-scrollbar-thumb {
+  background: rgba(233, 236, 235, 0.25);
+}
+.project-page-gallery {
+  width: 100%;
+  height: min(78svh, 850px);
+  min-height: 500px;
+  overflow: hidden;
+  background: #18242b;
+}
+
+.project-page-content {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 0 6vw 120px;
+}
+.project-detail-head {
+  margin-top: 48px;
+}
+.project-detail-head h2 {
+  margin-top: 12px;
+  font-size: clamp(48px, 5vw, 80px);
+  line-height: 0.94;
+}
+.project-detail-head .split-lede {
+  max-width: 650px;
+}
+.detail-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 58px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line-light);
+  border-bottom: 1px solid var(--line-light);
+}
+.detail-meta span {
+  display: block;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #8b999e;
+}
+.detail-meta strong {
+  display: block;
+  margin-top: 8px;
+  color: var(--paper);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+.detail-block {
+  margin-top: 55px;
+}
+.detail-block > p:last-child {
+  margin-top: 18px;
+  color: #c2cacc;
+  font-size: 14px;
+  line-height: 1.72;
+}
+.detail-tags {
+  margin-top: 18px;
+}
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.tag-row span {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(233, 236, 235, 0.15);
+  padding: 7px 9px;
+  color: #98a5a8;
+}
+
+@media screen and (max-width: 1200px) {
+  .project-page {
+    width: calc(100% - 90px);
+    margin-left: 90px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .project-page {
+    width: 100%;
+    margin-left: 0;
+    height: auto;
+    min-height: 100svh;
+    overflow: visible;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .detail-meta {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}

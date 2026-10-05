@@ -1,0 +1,46 @@
+.notes-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.note-list-page {
+  margin-top: 62px;
+  border-top: 1px solid var(--line);
+}
+.note-row-page {
+  display: grid;
+  grid-template-columns: 78px 30px 1fr 20px;
+  gap: 12px;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid var(--line);
+}
+.note-date,
+.note-index,
+.note-body > span {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.note-date {
+  color: #6a7477;
+}
+.note-index {
+  color: #899294;
+}
+.note-body > span {
+  color: #7c6640;
+}
+.note-body h3 {
+  margin-top: 8px;
+  font-size: 21px;
+  line-height: 1.08;
+}
+
+@media screen and (max-width: 640px) {
+  .note-row-page {
+    grid-template-columns: 60px 25px 1fr 18px;
+    gap: 8px;
+  }
+}

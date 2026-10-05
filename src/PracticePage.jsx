@@ -1,18 +1,16 @@
 import SplitPage from "./SplitPage";
-import MapArtwork from "./MapArtwork";
+import ProfileImg from "./assets/practice-prof.png";
 import { practice } from "./constants";
 import { FaArrowRight } from "react-icons/fa";
+import "./styles/Practice.css";
 
 function PracticePage() {
   return (
     <SplitPage
-      label="Practice"
-      index="03"
       dark={false}
       visual={
-        <div className="visual-stack">
-          <MapArtwork variant={3} />
-          <span className="visual-index">03 / SPATIAL PRACTICE</span>
+        <div className="visual-stack practice-visual">
+          <img src={ProfileImg} alt="Practice Artwork" />
         </div>
       }
     >

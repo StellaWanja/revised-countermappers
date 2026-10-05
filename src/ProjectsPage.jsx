@@ -27,7 +27,7 @@ function ProjectsPage() {
               <span>{project.year}</span>
             </div>
             <div className="project-index-art">
-              <img src={project.image} alt={project.title} />
+              <img src={project.blogImages[0]} alt={project.title} />
             </div>
             <div className="project-index-content">
               <span>{project.subtitle}</span>

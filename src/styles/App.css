@@ -37,16 +37,20 @@ main {
   color: var(--muted-light);
 }
 .rail-bottom {
-  writing-mode: vertical-rl;
-  font-size: 8px;
-  letter-spacing: 0.14em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
   color: #68767c;
 }
 .rail-mark {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
   font-size: 1.25rem;
-  letter-spacing: 0.18em;
-  transform: rotate(-90deg);
-  margin-top: 16px;
+  color: inherit;
+  transform: none;
 }
 .rail-mark:hover {
   color: var(--paper);
